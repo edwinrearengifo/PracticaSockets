@@ -72,16 +72,17 @@ namespace Cliente_Ejercicio6
             NetworkStream flujoRed = cliente.GetStream();
 
             // Se crea un nuevo objeto Elemento con datos específicos
-            Elemento elemento = new Elemento(1234567890987654L, "Cadena de Bicicleta", 18, 1000, true, false);
+            Elemento elemento = new Elemento(1234567890987654L, "Cambio de Cadena de Bicicleta para github", 18, 1000, true, false);
 
-            // Se crea un codificador de texto para codificar el elemento en texto
-            CodificadorTexto codificador = new CodificadorTexto();
+            // Se crea un codificadorCambiadoPorGithub de texto para codificar el elemento en texto
+            //CodificadorTexto codificadorCambiadoPorGithub = new CodificadorTexto();
+            CodificadorTexto codificadorCambiadoPorGithub = new CodificadorTexto();
 
             // Se codifica el elemento en texto y se obtienen los datos codificados en forma de arreglo de bytes
-            byte[] datosCodificados = codificador.Codificar(elemento);
+            byte[] datosCodificados = codificadorCambiadoPorGithub.Codificar(elemento);
 
             // Se muestra en la consola el elemento codificado en texto y su longitud en bytes
-            Console.WriteLine("Enviando elemento codificado en texto (" + datosCodificados.Length + " bytes): ");
+            Console.WriteLine("Cambio de mensaje por github - Enviando elemento codificado en texto (" + datosCodificados.Length + " bytes): ");
             Console.WriteLine(elemento);
 
             // Se envían los datos codificados al servidor a través del flujo de red
