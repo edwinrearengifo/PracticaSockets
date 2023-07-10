@@ -70,7 +70,7 @@ namespace Servidor_Ejercicio6
             Elemento elemento = decodificador.Decodificar(cliente.GetStream());
 
             // Se muestra en la consola el elemento decodificado recibido del cliente
-            Console.WriteLine("Se recibio un elemento codificado en texto:");
+            Console.WriteLine("Cambio realizado para prueba de Github:");
             Console.WriteLine(elemento);
 
             // Se crea un codificador binario para codificar el elemento modificado
